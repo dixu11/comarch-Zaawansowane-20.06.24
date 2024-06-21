@@ -17,6 +17,17 @@ public class Dog extends  Animal{
         this.knownTricks = knownTricks;
     }
 
+
+    public void makeSound() {
+        bark();
+    }
+
+    public void feed() {
+        System.out.println("pies je karmę dla psa");
+    }
+
+
+
     public void bark() {
         System.out.println("Hau hau");
     }
@@ -26,7 +37,7 @@ public class Dog extends  Animal{
     }
 
 
-    @Override
+
     public String toString() {
         return "Dog{" +
                 "name='" + name + '\'' +

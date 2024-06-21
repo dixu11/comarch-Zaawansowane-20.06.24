@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class InheritanceDemo {
     public static void main(String[] args) {
         Dog dog1 = new Dog("Bruno",2,4);
+        System.out.println(dog1 instanceof Dog);
+
+
+
        // dog1 = new Cat();
         Dog dog2 = new Dog();
         dog1.bark();
@@ -28,11 +32,27 @@ public class InheritanceDemo {
         System.out.println(cat2);
 
         AnimalKeeper animalKeeper = new AnimalKeeper();
-        animalKeeper.dogCare(dog1);
-        animalKeeper.catCare(cat1);
+//        animalKeeper.dogCare(dog1);
+//        animalKeeper.catCare(cat1);
 
         animalKeeper.animalCare(dog1);
         animalKeeper.animalCare(cat1);
+
+        System.out.println("--------");
+        Animal[] animals = new Animal[2];
+        animals[0] = dog1;
+        animals[1] = cat2;
+
+        for (Animal anAnimal : animals) {
+            anAnimal.makeSound();
+        }
+
+        //polimorfizm
+        Animal animal1 = new Cat();
+        animal1.makeSound();
+        animal1 = new Dog();
+        animal1.makeSound();
+
     }
 }
 
@@ -43,8 +63,19 @@ class AnimalKeeper {
     public void animalCare(Animal animal){
         System.out.println("Opiekuję się zwierzęciem");
         animal.feed();
-//        animal.bark(); // ?
-//        animal.meow(); // ?
+        //a teraz zrób swoją specjalna rzecz
+        animal.makeSound();
+
+        if(animal instanceof Dog){
+            Dog dog = (Dog) animal;
+            dog.bark();
+        }else if( animal instanceof Cat){
+            Cat cat = (Cat) animal;
+            cat.meow();
+        }
+
+    //   animal.bark(); // ?
+      //  animal.meow(); // ?
         System.out.println("zwierze nakarmione!");
     }
 

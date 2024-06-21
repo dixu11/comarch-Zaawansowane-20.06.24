@@ -17,6 +17,10 @@ public class Cat extends Animal{
         this.hardTemperament = hardTemperament;
     }
 
+    public void makeSound() {
+        meow();
+    }
+
     public void meow() {
         System.out.println("Miał miał");
     }

@@ -7,6 +7,10 @@ public class Animal {
         System.out.println("Zwierze nakarmione");
     }
 
+    public void makeSound() {
+        System.out.println("my sound here");
+    }
+
 
 
 }
