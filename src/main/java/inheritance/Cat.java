@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private String name;
     private int age;
     private boolean hardTemperament;

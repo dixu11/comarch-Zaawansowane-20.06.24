@@ -1,8 +1,5 @@
 package inheritance;
 
-
-import java.util.Scanner;
-
 public class InheritanceDemo {
     public static void main(String[] args) {
         Dog dog1 = new Dog("Bruno",2,4);
